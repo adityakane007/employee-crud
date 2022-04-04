@@ -1,0 +1,54 @@
+<br>
+<div class="row">
+    <div class="col-sm-10 title-align">
+        <h4>Employee Details</h4>
+    </div>
+    <div class="col-sm-2 button-align float-end">
+        <a [routerLink]="['/addemployee']" class="btn btn-primary m-1 float-right">Add Employee</a>
+    </div>
+</div>
+<hr>
+<!-- <div class="row">
+    <div class="col-sm-4" *ngFor="let emp of employeeData">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{emp.name}}</h5>
+                <p class="card-text">
+                    Location : {{emp.address}} <br>
+                    Email : {{emp.email}}<br>
+                    Mobile : {{emp.mobile}}</p>
+                <a [routerLink]="['/editemployee/',emp.id]" class="btn btn-primary m-1">Edit</a>
+                <button class="btn btn-danger" (click)="deleteemployee(emp.id)">Delete</button>
+            </div>
+            <br><br>
+            <hr>
+        </div>
+    </div>
+</div> -->
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile</th>
+            <th scope="col" colspan="1" style="text-align:justify;">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employeeData">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.address}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.mobile}}</td>
+            <td>
+                <a [routerLink]="['/viewemployee/',emp.id]" class="btn btn-primary m-1">View</a>
+                <a [routerLink]="['/editemployee/',emp.id]" class="btn btn-primary m-1">Edit</a>
+                <button class="btn btn-danger m-1" (click)="deleteemployee(emp.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,16 @@
+.row {
+    text-align: center;
+}
+
+.title-align {
+    float: left;
+    text-align: left;
+}
+
+.button-align {
+    float: right;
+}
+
+.button-position {
+    margin-left: 50%;
+}
