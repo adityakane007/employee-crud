@@ -11,6 +11,9 @@ import { EmployeeComponent } from './components/employee/employee.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ViewemployeeComponent } from './components/viewemployee/viewemployee.component';
+import { PipesPipe } from './pipes.pipe';
+import { SearchFilterPipe } from './pipes/search-filter.pipe';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ViewemployeeComponent } from './components/viewemployee/viewemployee.co
     EmployeeComponent,
     HomeComponent,
     NavComponent,
-    ViewemployeeComponent
+    ViewemployeeComponent,
+    PipesPipe,
+    SearchFilterPipe,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

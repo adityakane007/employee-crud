@@ -26,7 +26,7 @@
     </div>
 </div> -->
 
-<table class="table">
+<table class="table table-striped">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -34,7 +34,7 @@
             <th scope="col">Address</th>
             <th scope="col">Email</th>
             <th scope="col">Mobile</th>
-            <th scope="col" colspan="1" style="text-align:justify;">Action</th>
+            <th scope="col" colspan="3" style="text-align:center;">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -44,11 +44,12 @@
             <td>{{emp.address}}</td>
             <td>{{emp.email}}</td>
             <td>{{emp.mobile}}</td>
-            <td>
-                <a [routerLink]="['/viewemployee/',emp.id]" class="btn btn-primary m-1">View</a>
-                <a [routerLink]="['/editemployee/',emp.id]" class="btn btn-primary m-1">Edit</a>
-                <button class="btn btn-danger m-1" (click)="deleteemployee(emp.id)">Delete</button>
+            <td style="width: 5%;">                
+                <a [routerLink]="['/viewemployee/',emp.id]" class="btn btn-primary">View</a>
             </td>
+            <td style="width: 5%;"><a [routerLink]="['/editemployee/',emp.id]" class="btn btn-primary">Edit</a></td>
+            <td style="width: 5%;"><button class="btn btn-danger" (click)="deleteemployee(emp.id)">Delete</button></td>
+
         </tr>
     </tbody>
 </table>
